@@ -10,4 +10,5 @@
 
 **Test:** ping google.com should return something like PING google.com (172.217.2.46) 56(84) bytes of data.
 
+---
 _Notes and solution_:

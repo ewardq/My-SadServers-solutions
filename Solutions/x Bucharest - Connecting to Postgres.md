@@ -8,6 +8,7 @@ Credit [PykPyky](https://twitter.com/PykPyky)
 
 **Test:** Running `PGPASSWORD=app1user psql -h 127.0.0.1 -d app1 -U app1user -c '\q'` succeeds (does not return an error).
 
+---
 _Notes and solution:_
 
 The solution is to check the configuration file _pg_hba.conf_ for the SQL server located in _/etc/postgresql/$version/main/_, there you have to delete or comment all the configuration lines with the word _reject_.
