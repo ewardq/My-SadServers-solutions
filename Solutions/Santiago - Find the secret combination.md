@@ -1,11 +1,7 @@
 **Scenario:** "Santiago": Find the secret combination
-
 **Level:** Easy
-
 **Type:** Do
-
 **Tags:** [bash](https://sadservers.com/tag/bash)  
-
 **Description:** Alice the spy has hidden a secret number combination, find it using these instructions:  
   
 1) Find the number of **lines** with occurrences of the string **Alice** (case sensitive) in the _*.txt_ files in the _/home/admin_ directory  

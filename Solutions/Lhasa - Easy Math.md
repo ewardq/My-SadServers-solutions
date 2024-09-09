@@ -1,7 +1,5 @@
 **Scenario:** "Lhasa": Easy Math
-
 **Level:** Easy
-
 **Description:** There's a file _/home/admin/scores.txt_ with two columns (imagine the first number is a counter and the second one is a test score for example).  
   
 Find the average (more precisely; the arithmetic mean: sum of numbers divided by how many numbers are there) of the numbers in the second column (find the average score).  
