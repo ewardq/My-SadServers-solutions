@@ -11,7 +11,8 @@
 **Test:** `curl 127.0.0.1:80` should return: `hello sadserver`.
 
 ---
-_Notes and solution_: First, we try to make a HTTP request to the server.
+### Notes and solution:
+First, we try to make a HTTP request to the server.
 
 `curl 127.0.0.1:80`
 ![[Pasted image 20240820213512.png]]

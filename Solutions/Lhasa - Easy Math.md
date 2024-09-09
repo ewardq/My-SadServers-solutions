@@ -13,7 +13,7 @@ Save the solution in the _/home/admin/solution_ file, for example: echo "123.
 Tip: There's bc, Python3, Golang and sqlite3 installed in this VM.
 
 ---
-_Notes and solution:_
+### Notes and solution:
 First, we print the file to see what we are working with.
 ![[Pasted image 20240817173943.png]]
 

@@ -13,7 +13,8 @@
 Check My Solution: The "Check My Solution" button runs the script _/home/admin/agent/check.sh_, which you can
 
 ---
-_Notes and solution_:  First, we see how many files are in the target directory.
+### Notes and solution:
+First, we see how many files are in the target directory.
 
 ```bash
 cd /home/admin/data

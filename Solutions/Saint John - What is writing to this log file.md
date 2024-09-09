@@ -12,7 +12,8 @@ This program is no longer needed. Find it and terminate it.
 **Test:** The log file size doesn't change (within a time interval bigger than the rate of change of the log file).
 
 ---
-_Notes and solution:_ You can use `top` to see all the running processes
+### Notes and solution:
+You can use `top` to see all the running processes
 
 ![[Pasted image 20240815193543.png]]
 
