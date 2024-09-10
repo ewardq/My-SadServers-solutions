@@ -51,7 +51,8 @@ now, we want to know which is the most recurrent IP address, so we sort again nu
 ```bash 
 grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" /home/admin/access.log | sort | uniq -c | sort -n`
 ```
-![[Pasted image 20240815214525.png ]]
+
+![[ListOfIPs.png]]
 
 As we can see, the most recurring IP address is ___66.249.73.135___ with 482 requests.
 
