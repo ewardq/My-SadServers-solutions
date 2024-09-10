@@ -20,7 +20,11 @@ less /home/admin/access.log
 ```
 ![[Pasted image 20240815212040.png]]
 
-There is a lot of information in that file.  If we count the number of lines in that file using `wc -l /home/admin/access.log`
+There is a lot of information in that file.  If we count the number of lines in that file using:
+
+```bash
+wc -l /home/admin/access.log
+```
 ![[Pasted image 20240815212223.png]]
 
 First, we filter all the IPs with `grep` ( `-E`nhanced and exact match `o` options) and a RegEx pattern.
