@@ -25,6 +25,7 @@ or `ps aux` where:
 
 ![[Pasted image 20240815193619.png]]
 
+
 Now, it seems that there is a process that runs every other time while using somewhat high resources. To filter this process we use `grep`.
 
 ```bash
@@ -39,6 +40,7 @@ find -name "badlog.py"
 ```
 ![[Pasted image 20240815193935.png]]
 
+
 Now we have identified the script that creates the bad log. We have to eliminate it and then stop the process.
 
 Using `top` we can find the location of the script with the following command:
@@ -47,6 +49,7 @@ Using `top` we can find the location of the script with the following command:
 find -name "badlog.py"
 ```
 ![[Pasted image 20240815194259.png]]
+
 
 As we can see, the script is in _/home/$USER/badlog.py_, so we delete that script and then kill the process related.
 

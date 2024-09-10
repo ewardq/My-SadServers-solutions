@@ -22,6 +22,7 @@ ls
 ```
 ![[Pasted image 20240909142658.png]]
 
+
 We'll use the file #0 as a basis to compare the rest of the files. If _file1.txt_ is the odd one out, the `diff` command will show that all of the files are different; if not, it'll only show the file that's different from the others.
 
 We'll list all the files with the `ls` command and pass them as arguments (using `xargs`) to the `diff` command
@@ -34,6 +35,7 @@ where
 - `--color` highlights the changes between files (green meaning a line was added and red, deleted).
 - `-c` adds context to the result of the command, like where it was found and in which file.
 - `--from-file` makes it possible to compare _file0.txt_ with multiple files.
+
 
 And now we see that the file that's different from the rest is **file76.txt**.
 Additionally, each line consists of a lot of text so it is difficult to find the difference between each one.
@@ -50,12 +52,14 @@ cat file0.txt | awk '{ gsub(" ", "\n") } 1'
 ![[Pasted image 20240909143115.png]]
 where the `1` at the end makes the command print $0 at the end of execution.
 
+
 2. **Save the result in a temporary file**, to `diff` them later.
 
 ```bash
 cat file0.txt | awk '{ gsub(" ", "\n") } 1' > tempfile1.txt
 cat file76.txt | awk '{ gsub(" ", "\n") } 1' > tempfile2.txt
 ```
+
 
 3. **Compare the two new files together**
 
