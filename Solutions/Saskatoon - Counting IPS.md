@@ -15,27 +15,35 @@ Find what's the IP address that has the most requests in this file (there's no t
 ### Notes and solution:
 The first step is to open the log file to see what we are working with.
 
-`less /home/admin/access.log`
+```bash
+less /home/admin/access.log
+```
 ![[Pasted image 20240815212040.png]]
 
-As it can be seen, there is a lot of information, we can see the number of lines with the command `wc -l /home/admin/access.log`
+There is a lot of information in that file.  If we count the number of lines in that file using `wc -l /home/admin/access.log`
 ![[Pasted image 20240815212223.png]]
 
 First, we filter all the IPs with `grep` ( `-E`nhanced and exact match `o` options) and a RegEx pattern.
 
-`grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" /home/admin/access.log`
+```bash
+grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" /home/admin/access.log
+```
 ![[Pasted image 20240815212819.png]]
 where the RegEx pattern matches three digits `[0-9]{1,3}` between 0 and 9, followed by a dot `\.`, three times `{3}` and then a final set of three digits also between 0 and 9 `[0-9]{1,3}`.
 
 then, we sort (so we can later use `uniq`) and filter with the utility to count each time a unique IP address appears.
 
-`grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" /home/admin/access.log | sort | uniq`
+```bash 
+grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" /home/admin/access.log | sort | uniq
+```
 ![[Pasted image 20240815214156.png]]
 for instance, we can see that the _1.22.35.226_ IP address appears 6 times.
 
 now, we want to know which is the most recurrent IP address, so we sort again numerically with the command `sort -n`umerically.
 
-`grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" /home/admin/access.log | sort | uniq -c | sort -n`
+```bash 
+grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" /home/admin/access.log | sort | uniq -c | sort -n`
+```
 ![[Pasted image 20240815214525.png]]
 
 As we can see, the most recurring IP address is ___66.249.73.135___ with 482 requests.

@@ -21,34 +21,46 @@ First, we print the file to see what we are working with.
 
 We see that the second column contains the data to compute, so we `cut` that column.
 
-`cat /home/admin/scores.txt | cut --delimiter " " --fields 2`
+```bash
+cat /home/admin/scores.txt | cut --delimiter " " --fields 2
+```
 ![[Pasted image 20240817174122.png]]
 where we use a space _" "_ as a `delimiter` to indicate when a column ends, then, we select the second one with `--fields 2`.
 
 After that, to sum all those rows, we first create a single string with _+_ as a separator (using `paste`) so we can pass that output to the command `bc` to interpret and sum all the numbers.
 
-`cat /home/admin/scores.txt | cut --delimiter " " --fields 2 | paste -sd+ -`
+```bash
+cat /home/admin/scores.txt | cut --delimiter " " --fields 2 | paste -sd+ -
+```
 ![[Pasted image 20240817174804.png]]
 where the `-s` (serial) option makes _paste_ display the lines on one file and the option `-d+` makes the command join them all with a _+_ sign.
 
-`cat /home/admin/scores.txt | cut --delimiter " " --fields 2 | paste -sd+ - | bc`
+```bash
+cat /home/admin/scores.txt | cut --delimiter " " --fields 2 | paste -sd+ - | bc
+```
 ![[Pasted image 20240817174603.png]]
 we then pass that input to be interpreted by `bc` so it can be summed together.
 
 Now that we have the sum of all numbers, we also need the total numbers so we can preform the arithmetic  mean.
 
 We can get the total number with the command `wc -l` to count lines.
-`cat /home/admin/scores.txt | wc -l`
+```bash
+cat /home/admin/scores.txt | wc -l
+```
 ![[Pasted image 20240817175828.png]]
 
 or, since we are given a numbered list, we can also use the last line of the first column.
 
-`cat /home/admin/scores.txt | cut --delimiter " " --fields 1 | tail -n 1`
+```bash
+cat /home/admin/scores.txt | cut --delimiter " " --fields 1 | tail -n 1
+```
 ![[Pasted image 20240817180053.png]]
 
 To get the average, well use the command `bc` with a precision of 2 decimals (`scale=2`) and configured so it uses a float format (`-l`).
 
-`cat /home/admin/scores.txt | cut --delimiter " " --fields 2 | paste -sd+ - | bc | xargs -I % sh -c "echo 'scale=2; %/100'" | bc -l`
+```bash
+cat /home/admin/scores.txt | cut --delimiter " " --fields 2 | paste -sd+ - | bc | xargs -I % sh -c "echo 'scale=2; %/100'" | bc -l
+```
 ![[Pasted image 20240817180351.png]]
 
 With this, we conclude that the answer is ___5.20___.

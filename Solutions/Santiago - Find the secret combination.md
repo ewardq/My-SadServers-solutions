@@ -23,7 +23,9 @@ First, we list all the files on the _/home/admin/_ directory.
 
 There are one directory and one file that shouldn't be taken into consideration when counting the number of times **Alice** appears, so we filter those two with `find`.
 
-`find /home/admin/ -maxdepth 1 -iname "*.txt"`
+```bash
+find /home/admin/ -maxdepth 1 -iname "*.txt"
+```
 ![[Pasted image 20240817131914.png]]
 where `-maxdepth 1` ensures that we only search in the current directory (therefore filtering any files that may be in the unwanted sub directory) and `-iname "*.txt"` ensures we only see text files.
 
@@ -37,18 +39,24 @@ where `xargs` passes the output of the .txt file search results to the `grep` co
 
 Now, we filter only the word count of each file with `cut`
 
-`find /home/admin/ -maxdepth 1 -iname "*.txt" | xargs grep -c 'Alice' | cut --delimiter ":" --fields 2`
+```bash
+find /home/admin/ -maxdepth 1 -iname "*.txt" | xargs grep -c 'Alice' | cut --delimiter ":" --fields 2
+```
 ![[Pasted image 20240817181048.png]]
 where we use _:_ as a `--delimiter` to separate each line in two and then we choose the second `--fields`.
 
 To sum this numbers, we'll first `paste` all of them in a single line with a _plus sign_ in between them.
 
-`find /home/admin/ -maxdepth 1 -iname "*.txt" | xargs grep -c 'Alice' | cut --delimiter ":" --fields 2 | paste -sd+ -`
+```bash
+find /home/admin/ -maxdepth 1 -iname "*.txt" | xargs grep -c 'Alice' | cut --delimiter ":" --fields 2 | paste -sd+ -
+```
 ![[Pasted image 20240817181348.png]]
 
 Finally, we give that output to the `bc` command to interpret and sum.
 
-`find /home/admin/ -maxdepth 1 -iname "*.txt" | xargs grep -c 'Alice' | cut --delimiter ":" --fields 2 | paste -sd+ - | bc`
+```bash
+find /home/admin/ -maxdepth 1 -iname "*.txt" | xargs grep -c 'Alice' | cut --delimiter ":" --fields 2 | paste -sd+ - | bc
+```
 ![[Pasted image 20240817181603.png]]
 
 There are ___414___ mentions of **Alice** in total.
