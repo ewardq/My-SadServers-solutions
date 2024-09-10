@@ -75,7 +75,8 @@ As we can see, only the owner _root_ can read or write this file.
 To fix this, we'll also give other users the capability of _reading that file_.
 
 ```bash
-sudo chmod o+r /var/www/html/index.html```
+sudo chmod o+r /var/www/html/index.html
+```
 ![[Pasted image 20240820220713.png]]
 
 Now, we should get a response from the server.
