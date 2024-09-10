@@ -1,4 +1,8 @@
-**Scenario:** "Jakarta": it's always DNS.
+---
+dg-publish: true
+---
+
+# "Jakarta": it's always DNS.
 **Level:** Hard
 **Type:** Fix
 **Tags:** [dns](https://sadservers.com/tag/dns)   [unusual-tricky](https://sadservers.com/tag/unusual-tricky)  

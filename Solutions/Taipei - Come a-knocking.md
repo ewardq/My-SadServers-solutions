@@ -1,4 +1,8 @@
-**Scenario:** "Taipei": Come a-knocking
+---
+dg-publish: true
+---
+
+# "Taipei": Come a-knocking
 **Level:** Easy
 **Type:** Hack
 **Tags:** [hack](https://sadservers.com/tag/hack)  
@@ -33,6 +37,8 @@ Therefore, we can now make a request to the server.
 
 `echo $(curl localhost)`
 ![[Pasted image 20240829170539.png]]
+
+___Success!___
 
 ### Sad Servers' solution
 One other option is to knock in every single opened port to try and guess the correct sequence. This works only because we knew from the get-go that the secret knock consisted in knocking only one port.

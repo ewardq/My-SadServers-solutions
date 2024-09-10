@@ -1,4 +1,8 @@
-**Scenario:** "Saint John": what is writing to this log file?
+---
+dg-publish: true
+---
+
+# "Saint John": what is writing to this log file?
 **Level:** Easy
 **Type:** Fix
 **Tags:**
@@ -28,18 +32,22 @@ Now, it seems that there is a process that runs every other time while using som
 
 or with `ps`
 
-`find -name "badlog.py"
+`find -name "badlog.py"`
 ![[Pasted image 20240815193935.png]]
 
 Now we have identified the script that creates the bad log. We have to eliminate it and then stop the process.
 
 Using `top` we can find the location of the script with the following command:
 
-`find -name "badlog.py"
+`find -name "badlog.py"`
 ![[Pasted image 20240815194259.png]]
 
 As we can see, the script is in _/home/$USER/badlog.py_, so we delete that script and then kill the process related.
 
 `sudo find -name "badlog.py" | xargs rm` or `sudo rm /home/admin/badlog.py`
 
-`kill 590`
+```bash
+kill 590
+```
+
+___Now the log file is no longer increasing in size___

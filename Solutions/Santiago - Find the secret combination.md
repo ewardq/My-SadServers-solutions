@@ -1,4 +1,8 @@
-**Scenario:** "Santiago": Find the secret combination
+---
+dg-publish: true
+---
+
+# "Santiago": Find the secret combination
 **Level:** Easy
 **Type:** Do
 **Tags:** [bash](https://sadservers.com/tag/bash)  

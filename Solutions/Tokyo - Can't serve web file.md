@@ -1,4 +1,8 @@
-**Scenario:** "Tokyo": can't serve web file
+---
+dg-publish: true
+---
+
+# "Tokyo": can't serve web file
 **Level:** Medium
 **Type:** Fix
 **Tags:** [apache](https://sadservers.com/tag/apache)   [realistic-interviews](https://sadservers.com/tag/realistic-interviews)  
