@@ -3,9 +3,7 @@ dg-publish: true
 ---
 
 # "Taipei": Come a-knocking
-**Level:** Easy
 **Type:** Hack
-**Tags:** [hack](https://sadservers.com/tag/hack)  
 **Description:** There is a web server on port :80 protected with [Port Knocking](https://en.wikipedia.org/wiki/Port_knocking). Find the one "knock" needed (sending a SYN to a single port, not a sequence) so you can `curl localhost`.
 
 **Test:** Executing `curl localhost` returns a message with md5sum _fe474f8e1c29e9f412ed3b726369ab65_. (Note: the resulting md5sum includes the new line terminator: `echo $(curl localhost)`)

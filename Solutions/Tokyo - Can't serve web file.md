@@ -3,10 +3,7 @@ dg-publish: true
 ---
 
 # "Tokyo": can't serve web file
-**Level:** Medium
 **Type:** Fix
-**Tags:** [apache](https://sadservers.com/tag/apache)   [realistic-interviews](https://sadservers.com/tag/realistic-interviews)  
-
 **Description:** There's a web server serving a file _/var/www/html/index.html_ with content "hello sadserver" but when we try to check it locally with an HTTP client like `curl 127.0.0.1:80`, nothing is returned. This scenario is not about the particular web server configuration and you only need to have general knowledge about how web servers work.
 
 **Test:** `curl 127.0.0.1:80` should return: `hello sadserver`.
@@ -78,8 +75,7 @@ As we can see, only the owner _root_ can read or write this file.
 To fix this, we'll also give other users the capability of _reading that file_.
 
 ```bash
-sudo chmod o+r /var/www/html/index.html
-```
+sudo chmod o+r /var/www/html/index.html```
 ![[Pasted image 20240820220713.png]]
 
 Now, we should get a response from the server.

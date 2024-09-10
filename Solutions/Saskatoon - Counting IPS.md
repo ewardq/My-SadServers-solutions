@@ -3,7 +3,7 @@ dg-publish: true
 ---
 
 # "Saskatoon": counting IPs.
-**Level:** Easy
+**Type:** Do
 **Description:** There's a web server access log file at 
 _/home/admin/access.log_. The file consists of one line per HTTP request, with the requester's IP address at the beginning of each line.  
   

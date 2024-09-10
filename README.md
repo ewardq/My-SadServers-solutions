@@ -8,6 +8,7 @@ Here I'm archiving my solutions to the https://sadservers.com/ Linux SRE/DevOps 
 [[Lhasa - Easy Math]]
 [[Taipei - Come a-knocking]]
 [[Apia - Needle in a Haystack]]
+[[Minneapolis - Break a CSV file]]
 
 Medium
 [[Tokyo - Can't serve web file]]
