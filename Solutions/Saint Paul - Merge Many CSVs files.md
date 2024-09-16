@@ -30,3 +30,5 @@ head -n 1 polldayregistrations_enregistjourduscrutin10001.csv > all.csv
  ```bash
  tail -n+2 -q *.csv >> all.csv
 ```
+
+___Now a merged file was correctly created without repeating headers.___
