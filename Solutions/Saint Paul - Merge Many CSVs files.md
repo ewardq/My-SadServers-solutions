@@ -13,11 +13,20 @@ cat *.csv > all.csv
 ```
 but this leads to headers being repeated all thorough the resulting file.
 
-So, to fix this, instead of simply concatenating all of the files, it's necessary to concatenate only the common header (from the first file) 
- ```bash
-head -n 1 file1.csv > combined.out && tail -n+2 -q *.csv >> combined.out
-```
+So, to fix this, instead of concatenating all lines of all files, concatenate the common header (from the first file) and then the content from each file using a recursive search.
 
  ```bash
 head -n 1 polldayregistrations_enregistjourduscrutin10001.csv > all.csv && tail -n+2 -q *.csv >> all.csv
+```
+
+Let's break down this command 
+
+1. First add the header from the first file to the target file
+ ```bash
+head -n 1 polldayregistrations_enregistjourduscrutin10001.csv > all.csv
+```
+
+2. Then, add the content from all of the files present in the folder **at the same time** `&&`, this is to prevent adding the target file (all.csv) in this operation, thus adding the header two times.
+ ```bash
+ tail -n+2 -q *.csv >> all.csv
 ```
