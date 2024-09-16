@@ -13,7 +13,7 @@ cat *.csv > all.csv
 ```
 but this leads to headers being repeated all thorough the resulting file.
 
-
+So, to fix this, instead of simply concatenating all of the files, it's necessary to concatenate only the common header (from the first file) 
  ```bash
 head -n 1 file1.csv > combined.out && tail -n+2 -q *.csv >> combined.out
 ```
