@@ -1,8 +1,7 @@
 ---
 dg-publish: true
 ---
-
-# "Santiago": Find the secret combination
+---
 **Type:** Do
 **Description:** Alice the spy has hidden a secret number combination, find it using these instructions:  
   
