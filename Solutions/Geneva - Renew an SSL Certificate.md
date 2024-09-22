@@ -15,5 +15,13 @@ The "Check My Solution" button runs the script _/home/admin/agent/check.sh_, wh
 
 ---
 ## Notes and solution
+First, let's see where the current certificate is located and if there is a private key with it.
+
+``` bash
+cat /etc/nginx/sites-available/default
+```
+
+![[CertLocationNginx.PNG]]
+where we can see that both the certification and the private key are stored in _/etc/nginx/ssl/_
 
 
