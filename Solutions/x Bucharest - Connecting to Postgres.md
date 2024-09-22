@@ -1,8 +1,7 @@
 ---
 dg-publish: true
 ---
-
-# "Bucharest": Connecting to Postgres
+---
 **Type:** Fix
 **Description:** A web application relies on the PostgreSQL 13 database present on this server. However, the connection to the database is not working. Your task is to identify and resolve the issue causing this connection failure. The application connects to a database named _app1_ with the user _app1user_ and the password _app1user_.  
   

@@ -1,8 +1,7 @@
 ---
 dg-publish: true
 ---
-
-# "Taipei": Come a-knocking
+---
 **Type:** Hack
 **Description:** There is a web server on port :80 protected with [Port Knocking](https://en.wikipedia.org/wiki/Port_knocking). Find the one "knock" needed (sending a SYN to a single port, not a sequence) so you can `curl localhost`.
 
