@@ -24,4 +24,14 @@ cat /etc/nginx/sites-available/default
 ![[CertLocationNginx.PNG]]
 where we can see that both the certification and the private key are stored in _/etc/nginx/ssl/_
 
+Then, i's necessary to create a new SLL certificate using openssl. To skip the step where we would have to enter all the necessary information (Company name, State, Country, email, etc.) we'll use the existing certificate to extract that information.
+
+This command creates a self-signed certificate (`nginx.crt.new`) from an existing private key (`nginx.key`) and (`nginx.csr`):
+``` bash
+openssl x509 \
+       -signkey nginx.key \
+       -in nginx.csr \
+       -req -days 365 -out nginx.crt.new
+```
+
 
