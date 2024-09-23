@@ -2,6 +2,7 @@
 dg-publish: true
 ---
 ---
+#bash #find #grep #cut 
 **Type:** Do
 **Description:** Alice the spy has hidden a secret number combination, find it using these instructions:  
   

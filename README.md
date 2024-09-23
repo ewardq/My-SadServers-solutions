@@ -2,7 +2,9 @@
 Here I'm archiving my solutions to the https://sadservers.com/ Linux SRE/DevOps list of scenarios.
 
 [[Saint John - What is writing to this log file]]
+- bash , top, ps, grep, find, kill
 [[Saskatoon - Counting IPS]]
+- bash, wc, grep, sort
 [[Santiago - Find the secret combination]]
 [[x Bucharest - Connecting to Postgres]]
 [[Lhasa - Easy Math]]

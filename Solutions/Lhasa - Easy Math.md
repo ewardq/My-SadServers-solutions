@@ -2,6 +2,7 @@
 dg-publish: true
 ---
 ---
+#bash #cut #wc
 **Type:** Do
 **Description:** There's a file _/home/admin/scores.txt_ with two columns (imagine the first number is a counter and the second one is a test score for example).  
   

@@ -2,6 +2,7 @@
 dg-publish: true
 ---
 ---
+#diff #bash #awk
 **Type:** Do
 **Description:** In a directory _/home/admin/data_, there are multiple files, all of them with same content. One of these files has been modified, a word was added. You need to identify which word it is and put it in the solution file (both newline terminated or not are accepted).
 
