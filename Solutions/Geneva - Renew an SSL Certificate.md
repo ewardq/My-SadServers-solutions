@@ -2,6 +2,7 @@
 dg-publish: true
 ---
 ---
+#bash #openssl #nginx #systemctl
 **Scenario:** "Geneva": Renew an SSL Certificate
 **Level:** Easy
 **Type:** Fix  
